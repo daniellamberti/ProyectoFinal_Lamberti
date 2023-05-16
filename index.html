@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Entrega Final Daniel Lamberti</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>Promedios finales para alumnos de Conservatorio</h1>
+
+                    <!-- Formulario para ingreso de datos del USUARIO -->
+
+        <div id="formulario-nombre" class="formulario">
+
+            <div class="container">
+                <h2>Bienvenido. Ingresa tu nombre y apellido</h2>
+
+                <input type="text" id="input-nombre" placeholder="Nombre y Apellido">
+                <button id="enviarSaludo">Ok</button>
+            </div>
+        </div>
+        <p id="saludar"></p>
+
+                    <!-- Formulario para ingreso notas Instrumento -->
+
+        <h2>Notas de asignatura Instrumento</h2>
+
+        <form id="formInst">
+            <label for="examen1">Examen 1 de Instrumento: </label>
+            <input type="text" id="instrumento1">
+
+            <label for="examen2"> Examen 2 de Instrumento: </label>
+            <input type="text" id="instrumento2">
+
+            <label for="examen3">Examen 3 de Instrumento: </label>
+            <input type="tex" id="instrumento3">
+
+            <button>Enviar</button>
+            <br>
+            <p id="botonInstAqui"></p>
+            <p id="aprobAquiInst"></p>
+        </form>
+
+        <div id="contenedor"></div>
+
+                        <!-- Formulario para ingreso notas Teoria -->
+
+        <h2>Notas de asignatura Teoría</h2>
+
+        <form id="formTeor">
+            <label for="examen1">Examen 1 de Teoría: </label>
+            <input type="text" id="teoria1">
+
+            <label for="examen2"> Examen 2 de Teoría: </label>
+            <input type="text" id="teoria2">
+
+            <label for="examen3">Examen 3 de Teoría: </label>
+            <input type="text" id="teoria3">
+
+            <label for="examen4">Examen 4 de Teoría: </label>
+            <input type="text" id="teoria4">
+
+            <label for="examen5">Examen 5 de Teoría: </label>
+            <input type="text" id="teoria5">
+
+            <button>Enviar</button>
+            <br>
+            <p id="botonTeorAqui"></p>
+            <p id="aprobAquiTeor"></p>
+        </form>
+                            <!-- Formulario para ingreso notas Armonia -->
+
+        <h2>Notas de asignatura Armonía</h2>
+
+        <form id="formArm">
+            <label for="examen1">Examen 1 de Armonía: </label>
+            <input type="text" id="armonia1">
+
+            <label for="examen2"> Examen 2 de Armonía: </label>
+            <input type="text" id="armonia2">
+
+            <label for="examen3">Examen 3 de Armonía: </label>
+            <input type="text" id="armonia3">
+
+            <label for="examen4">Examen 4 de Armonía: </label>
+            <input type="text" id="armonia4">
+
+            <button>Enviar</button>
+
+            <p id="botonArmAqui"></p>
+            <p id="aprobAquiArm"></p>
+        </form>
+
+                            <!-- Formulario para ingreso notas Ensamble -->
+
+        <h2>Notas de asignatura Ensamble</h2>
+
+        <form id="formEns">
+            <label for="examen1">Examen 1 de Ensamble: </label>
+            <input type="text" id="ensamble1">
+
+            <label for="examen2"> Examen 2 de Ensamble: </label>
+            <input type="text" id="ensamble2">
+
+            <label for="examen3">Examen 3 de Ensamble: </label>
+            <input type="text" id="ensamble3">
+
+            <button>Enviar</button>
+
+            <p id="botonEnsAqui"></p>
+            <p id="aprobAquiEns"></p>
+        </form>
+
+            <!-- Se informa al usuario sobre las notas promedios finales de cada ASIGNATURA -->
+
+        <h3>Te recordamos que las notas promedios finales de las 4 materias son:</h3>
+
+        <button id="verPromedios">Ver Promedios</button>
+
+        <ul id="listadoPromedios">
+        </ul>
+
+    <!-- Se informa al usuario sobre todas las calificaciones obtenidas en los exámenes de las ASIGNATURAS -->
+
+        <h3>Te detallamos a continuación las notas de todos los examenes rendidos en cada materia:</h3>
+        <button id="verNotas">Ver Notas Obtenidas</button>
+
+        <ul id="listadoNotas">
+        </ul>
+
+            <!-- Se informa al usuario su nota promedio FINAL de curso y si lo aprobó o no -->
+
+
+        <h3>En esta sección podes revisar tu nota promedio final y comprobar si aprobaste el curso</h3>
+
+        <button id="promedioFinal">Ver nota Promedio Final</button>
+
+        <p id="despedir"></p>
+
+        <p id="comentarioAprobado"></p>
+
+        <p id="comentarioDesaprobado"></p>
+
+        <!-- Se ofrece al usuario la posibilidad de verificar quienes fueron los docentes y revisores -->
+
+        <button id="botRev">Verificar nombres de Docentes y Revisores</button>
+
+        <ul id="revisores">
+        </ul>
+
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+
+    </body>
+</html>
