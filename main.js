@@ -121,7 +121,7 @@ formInst.addEventListener("submit", (e)=>{
         swal.fire("Debes rellenar todos los campos");
     }
 
-    else if(isNaN(exInst1) || isNaN(exInst2) || isNaN(exInst1)) {
+    else if(isNaN(exInst1) || isNaN(exInst2) || isNaN(exInst3)) {
         swal.fire("No puedes ingresar texto en estos campos, solo numeros");
     }
 
